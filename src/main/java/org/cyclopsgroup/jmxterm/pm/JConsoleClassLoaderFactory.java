@@ -32,7 +32,7 @@ public class JConsoleClassLoaderFactory {
       jconsoleJar = new File(javaHome, "lib/jconsole.jar");
     }
     if (!toolsJar.isFile()) {
-      throw new RuntimeException("Operation requires JDK instead of JRE");
+      throw new RuntimeException(toolsJar + " file is not found");
     }
     if (!jconsoleJar.isFile()) {
       throw new RuntimeException(jconsoleJar + " file is not found");
