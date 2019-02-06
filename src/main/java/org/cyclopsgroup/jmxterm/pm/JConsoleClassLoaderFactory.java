@@ -21,7 +21,8 @@ public class JConsoleClassLoaderFactory {
    * @return ClassLoader that understands tools.jar and jconsole.jar
    */
   public static ClassLoader getClassLoader() {
-    File javaHome = new File(SystemUtils.JAVA_HOME).getAbsoluteFile().getParentFile();
+    String JAVA_HOME = "/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64/jre/bin/";
+    File javaHome = new File(JAVA_HOME).getAbsoluteFile().getParentFile();
     final File toolsJar, jconsoleJar;
     if (isBeforeJava7() && isMacOs()) {
       toolsJar = new File(javaHome, "Classes/classes.jar");
